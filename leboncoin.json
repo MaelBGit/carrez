@@ -1,0 +1,15 @@
+{
+	"title":"leboncoin",
+	"type":"object",
+	"property":
+	{
+		"url": {"type:"string"},
+		"title": {"type":"string"},
+		"price": {"type":"integer"},
+		"city": {"type":"string"},
+		"zipcode": {"type":"integer"}
+		"goodstype": {"type":"string"},
+		"number_pieces": {"type":"integer"},
+		"surface": {"type":"string"},
+	}
+}
