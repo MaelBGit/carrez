@@ -1,0 +1,18 @@
+{
+	"title": "meilleuragents",
+	"type": "object",
+	"property": {
+		"zipcode": {
+			"type": "integer"
+		},
+		"average_flat_price": {
+			"type": "integer"
+		},
+		"average_house_price": {
+			"type": "integer"
+		},
+		"average_rent_price": {
+			"type": "integer"
+		}
+	}
+}
