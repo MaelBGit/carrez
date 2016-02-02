@@ -2,9 +2,6 @@
 	"title": "leboncoin",
 	"type": "object",
 	"property": {
-		"url": {
-			"type": "string"
-		},
 		"title": {
 			"type": "string"
 		},
@@ -26,5 +23,6 @@
 		"surface": {
 			"type": "string"
 		}
-	}
+	},
+	"required": ["price", "zipcode", "surface"]
 }
