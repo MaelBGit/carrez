@@ -1,5 +1,5 @@
 {
-	"title": "meilleuragents",
+	"title": "meilleursagents",
 	"type": "object",
 	"property": {
 		"zipcode": {
@@ -14,5 +14,6 @@
 		"average_rent_price": {
 			"type": "integer"
 		}
-	}
+	},
+	"required": ["zipcode", "average_flat_price", "average_house_price", "average_rent_price"]
 }
