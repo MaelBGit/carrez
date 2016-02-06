@@ -23,6 +23,9 @@ app.get('/scrape', function(req, res){
 		number_pieces = goods[1].children[0].data;
 		surface = goods[2].children[0].data;
 		
+		price = price.match(/[0-9,]/g).join("");
+		surface = surface.match(/[0-9,]/g).join("");
+		
 		json.property.title = title;
 		json.property.price = price;
 		json.property.city = city;

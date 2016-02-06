@@ -45,7 +45,7 @@ app.listen('8082');
 
 console.log('Magic happens on port 8082');*/
 
-	var url = fs.readFileSync('./92200.html', 'utf8');
+	var url = fs.readFileSync('./92300.html', 'utf8');
 	
 	var $ = cheerio.load(url);
 
@@ -58,11 +58,46 @@ console.log('Magic happens on port 8082');*/
 		average_house_price = prices[1].children[0].data;
 		average_rent_price = prices[2].children[0].data;
 		
+		average_flat_price = average_flat_price.match(/[0-9,]/g).join("").replace(",", ".");
+		average_house_price = average_house_price.match(/[0-9,]/g).join("").replace(",", ".");
+		average_rent_price = average_rent_price.match(/[0-9,]/g).join("").replace(",", ".");
+		
 		
 		json.property.zipcode = zipcode;
 		json.property.average_flat_price = average_flat_price;
 		json.property.average_house_price = average_house_price;
 		json.property.average_rent_price = average_rent_price;
+		
+		var goodstype = output.property.goodstype;
+		var ma_Price; 
+		
+		switch(goodstype)
+		{
+			case "Appartement":
+				ma_Price = json.property.average_flat_price;
+			break;
+			
+			case "Maison":
+				ma_Price = json.property.average_house_price;
+			break;
+			
+			case "Location":
+				ma_Price = json.property.average_rent_price
+			break;
+		}
+		
+		var ppm = output.property.price/output.property.surface;
+		
+		if(ppm < ma_Price)
+		{
+			json.property.gooddeal = true;
+			console.log("Good Deal!");	
+		}
+		else if(ppm > ma_Price)
+		{
+			json.property.gooddeal = false;
+			console.log("Bad Deal!");
+		}
 		
 		fs.writeFile('ma.json', JSON.stringify(json, null, 4), function(err){
 
