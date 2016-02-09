@@ -1,0 +1,18 @@
+{
+    "title": "leboncoin",
+    "type": "object",
+    "property": {
+        "title": "Appartement 2 pi�ces 32 m�",
+        "price": "275000",
+        "city": "Levallois-Perret",
+        "zipcode": "92300",
+        "goodstype": "Appartement",
+        "number_pieces": "2",
+        "surface": "32"
+    },
+    "required": [
+        "price",
+        "zipcode",
+        "surface"
+    ]
+}

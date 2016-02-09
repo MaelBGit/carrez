@@ -1,0 +1,11 @@
+FEATURES
+If the user has found a goods that interesting him,
+he has to copy and paste the url in a field text.
+Then, he will click on a compute button and that will launch the 
+program.
+The program will take the information from the url page
+and will stock it. 
+Then, thanks to the leboncoin' zipcode, the program will take
+the informations of the zipcode in Meilleursagents.
+To finish, it will compare both information stocked and will
+tell to the user, wether it's a good deal or not.

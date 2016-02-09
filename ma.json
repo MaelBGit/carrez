@@ -1,0 +1,18 @@
+{
+    "title": "meilleursagents",
+    "type": "object",
+    "property": {
+        "zipcode": "92300",
+        "average_flat_price": "9016",
+        "average_house_price": "9987",
+        "average_rent_price": "26.2",
+        "price_per_meter": 8593.75,
+        "gooddeal": true
+    },
+    "required": [
+        "zipcode",
+        "average_flat_price",
+        "average_house_price",
+        "average_rent_price"
+    ]
+}

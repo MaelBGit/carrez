@@ -87,6 +87,7 @@ console.log('Magic happens on port 8082');*/
 		}
 		
 		var ppm = output.property.price/output.property.surface;
+		json.property.price_per_meter = ppm;
 		
 		if(ppm < ma_Price)
 		{
